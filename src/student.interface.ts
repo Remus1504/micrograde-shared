@@ -1,18 +1,18 @@
-import { ObjectId } from "mongoose";
+import { ObjectId } from 'mongoose';
 
-export interface IBuyerDocument {
+export interface studentDocument {
   _id?: string | ObjectId;
   username?: string;
   email?: string;
   profilePicture?: string;
   country: string;
-  isSeller?: boolean;
-  purchasedGigs: string[];
+  isInstructor?: boolean;
+  enrolledCourses: string[];
   createdAt?: Date | string;
   updatedAt?: Date | string;
 }
 
 export interface IReduxBuyer {
   type?: string;
-  payload: IBuyerDocument;
+  payload: studentDocument;
 }

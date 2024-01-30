@@ -1,15 +1,10 @@
-import { ObjectId } from "mongoose";
-import { IRatingCategories, IReviewDocument } from "./review.interface";
-import { ISellerDocument } from "./seller.interface";
+import { ObjectId } from 'mongoose';
+import { IRatingCategories, IReviewDocument } from './review.interface';
+import { InstructorDocument } from './instructor.interface';
 
-export type GigType =
-  | string
-  | string[]
-  | number
-  | unknown
-  | undefined;
+export type courseType = string | string[] | number | unknown | undefined;
 
-export interface ICreateGig extends Record<string, GigType> {
+export interface ICreateCourse extends Record<string, courseType> {
   // [key: string]: string | string[] | number | undefined;
   sellerId?: string;
   profilePicture?: string;
@@ -25,7 +20,7 @@ export interface ICreateGig extends Record<string, GigType> {
   basicDescription: string;
 }
 
-export interface ISellerGig {
+export interface InstructorCourse {
   _id?: string | ObjectId;
   // this "id" property is used because elastcisearch does not accept a key with an underscore "_id"
   // elasticsearch has _id as a reserved field name
@@ -58,19 +53,19 @@ export interface ISellerGig {
 }
 
 export interface IGigContext {
-  gig: ISellerGig;
-  seller: ISellerDocument;
+  gig: InstructorCourse;
+  seller: InstructorDocument;
   isSuccess?: boolean;
   isLoading?: boolean;
 }
 
 export interface IGigsProps {
   type?: string;
-  gig?: ISellerGig;
+  gig?: InstructorCourse;
 }
 
 export interface IGigCardItems {
-  gig: ISellerGig;
+  gig: InstructorCourse;
   linkTarget: boolean;
   showEditIcon: boolean;
 }
@@ -92,7 +87,7 @@ export interface IGigInfo {
 }
 
 export interface IGigTopProps {
-  gigs: ISellerGig[];
+  gigs: InstructorCourse[];
   title?: string;
   subTitle?: string;
   category?: string;

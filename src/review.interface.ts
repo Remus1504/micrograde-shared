@@ -1,5 +1,5 @@
 export interface IReviewMessageDetails {
-  gigId?: string;
+  courseId?: string;
   reviewerId?: string;
   sellerId?: string;
   review?: string;
@@ -15,7 +15,7 @@ export interface IRatingTypes {
 
 export interface IReviewDocument {
   _id?: string;
-  gigId: string;
+  courseId: string;
   reviewerId: string;
   sellerId: string;
   review: string;

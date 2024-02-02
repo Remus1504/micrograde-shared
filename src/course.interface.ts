@@ -52,19 +52,19 @@ export interface InstructorCourse {
   toJSON?: () => unknown;
 }
 
-export interface IGigContext {
+export interface ICourseContext {
   gig: InstructorCourse;
   seller: InstructorDocument;
   isSuccess?: boolean;
   isLoading?: boolean;
 }
 
-export interface IGigsProps {
+export interface ICourseProps {
   type?: string;
   gig?: InstructorCourse;
 }
 
-export interface IGigCardItems {
+export interface ICourseCardItems {
   gig: InstructorCourse;
   linkTarget: boolean;
   showEditIcon: boolean;
@@ -75,18 +75,18 @@ export interface ISelectedBudget {
   maxPrice: string;
 }
 
-export interface IGigViewReviewsProps {
+export interface ICourseViewReviewsProps {
   showRatings: boolean;
   reviews?: IReviewDocument[];
 }
 
-export interface IGigInfo {
+export interface ICourseInfo {
   total: number | string;
   title: string;
   bgColor: string;
 }
 
-export interface IGigTopProps {
+export interface ICourseTopProps {
   gigs: InstructorCourse[];
   title?: string;
   subTitle?: string;

@@ -1,5 +1,5 @@
 import mongoose, { ObjectId } from 'mongoose';
-import { IOffer } from './enrolment.interface';
+import { IEnrolment } from './enrolment.interface';
 import { InstructorCourse } from './course.interface';
 import { InstructorDocument } from './instructor.interface';
 
@@ -19,16 +19,16 @@ export interface IMessageDocument {
   fileType?: string;
   fileSize?: string;
   fileName?: string;
-  gigId?: string;
-  sellerId?: string;
-  buyerId?: string;
+  courseId?: string;
+  instructorId?: string;
+  studentId?: string;
   senderUsername?: string;
   senderPicture?: string;
   receiverUsername?: string;
   receiverPicture?: string;
   isRead?: boolean;
   hasOffer?: boolean;
-  offer?: IOffer;
+  offer?: IEnrolment;
   hasConversationId?: boolean;
   createdAt?: Date | string;
 }
@@ -37,18 +37,18 @@ export interface IMessageDetails {
   sender?: string;
   offerLink?: string;
   amount?: string;
-  buyerUsername?: string;
-  sellerUsername?: string;
+  studentUsername?: string;
+  instructorUsername?: string;
   title?: string;
   description?: string;
-  deliveryDays?: string;
+  durationTime?: string;
   template?: string;
 }
 
 export interface IChatBoxProps {
-  seller: IChatSellerProps;
-  buyer: IChatBuyerProps;
-  gigId: string;
+  instructor: IChatSellerProps;
+  student: IChatBuyerProps;
+  courseId: string;
   onClose: () => void;
 }
 
@@ -67,6 +67,6 @@ export interface IChatBuyerProps {
 
 export interface IChatMessageProps {
   message: IMessageDocument;
-  seller?: InstructorDocument;
+  instructor?: InstructorDocument;
   course?: InstructorCourse;
 }

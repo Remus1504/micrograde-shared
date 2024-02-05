@@ -1,10 +1,10 @@
 export interface IReviewMessageDetails {
   courseId?: string;
   reviewerId?: string;
-  sellerId?: string;
+  instructorId?: string;
   review?: string;
   rating?: number;
-  orderId?: string;
+  enrolledId?: string;
   createdAt?: string;
   type: string;
 }
@@ -17,11 +17,11 @@ export interface IReviewDocument {
   _id?: string;
   courseId: string;
   reviewerId: string;
-  sellerId: string;
+  instructorId: string;
   review: string;
   reviewerImage: string;
   rating: number;
-  orderId: string;
+  enrolledId: string;
   createdAt: Date | string;
   reviewerUsername: string;
   country: string;

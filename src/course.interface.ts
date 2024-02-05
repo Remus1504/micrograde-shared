@@ -6,7 +6,7 @@ export type courseType = string | string[] | number | unknown | undefined;
 
 export interface ICreateCourse extends Record<string, courseType> {
   // [key: string]: string | string[] | number | undefined;
-  sellerId?: string;
+  instructorId?: string;
   profilePicture?: string;
   title: string;
   categories: string;
@@ -61,11 +61,11 @@ export interface ICourseContext {
 
 export interface ICourseProps {
   type?: string;
-  gig?: InstructorCourse;
+  course?: InstructorCourse;
 }
 
 export interface ICourseCardItems {
-  gig: InstructorCourse;
+  course: InstructorCourse;
   linkTarget: boolean;
   showEditIcon: boolean;
 }
@@ -87,7 +87,7 @@ export interface ICourseInfo {
 }
 
 export interface ICourseTopProps {
-  gigs: InstructorCourse[];
+  course: InstructorCourse[];
   title?: string;
   subTitle?: string;
   category?: string;

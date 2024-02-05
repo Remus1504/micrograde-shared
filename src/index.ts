@@ -37,15 +37,15 @@ export {
   ICourseTopProps,
 } from './course.interface';
 export {
-  IOrderNotifcation,
-  IOffer,
-  IExtendedDelivery,
+  IEnrolmentNotifcation,
+  IEnrolment,
+  IExtendedEnrolment,
   IDeliveredWork,
-  IOrderEvents,
-  IOrderReview,
-  IOrderMessage,
-  IOrderDocument,
-} from './order.interface';
+  IEnrolmentEvents,
+  ICourseReview,
+  IEnrolmentMessage,
+  IEnrolmentDocument,
+} from './enrolment.interface';
 export {
   IReviewMessageDetails,
   IRatingTypes,

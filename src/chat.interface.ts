@@ -1,5 +1,5 @@
 import mongoose, { ObjectId } from 'mongoose';
-import { IOffer } from './order.interface';
+import { IOffer } from './enrolment.interface';
 import { InstructorCourse } from './course.interface';
 import { InstructorDocument } from './instructor.interface';
 

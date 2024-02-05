@@ -1,4 +1,4 @@
-export interface IOffer {
+export interface IEnrolment {
   [key: string]: string | number | boolean | undefined;
   gigTitle: string;
   price: number;
@@ -11,7 +11,7 @@ export interface IOffer {
   reason?: string; // this is the reason for extending the delivery date
 }
 
-export interface IExtendedDelivery {
+export interface IExtendedEnrolment {
   originalDate: string;
   newDate: string;
   days: number;
@@ -27,29 +27,29 @@ export interface IDeliveredWork {
   fileName: string;
 }
 
-export interface IOrderEvents {
+export interface IEnrolmentEvents {
   placeOrder: string;
   requirements: string;
   orderStarted: string;
   deliveryDateUpdate?: string;
-  orderDelivered?: string;
-  buyerReview?: string;
-  sellerReview?: string;
+  enrolmentSucessful?: string;
+  studentReview?: string;
+  instructorReview?: string;
 }
 
-export interface IOrderReview {
+export interface ICourseReview {
   rating: number;
   review: string;
   date?: string;
 }
 
-export interface IOrderMessage {
+export interface IEnrolmentMessage {
   sellerId?: string;
   buyerId?: string;
-  ongoingJobs?: number;
-  completedJobs?: number;
-  totalEarnings?: number;
-  purchasedGigs?: string;
+  ongoingTasks?: number;
+  completedTasks?: number;
+  totalPoints?: number;
+  enrolledCourses?: string;
   recentDelivery?: string;
   type?: string;
   receiverEmail?: string;
@@ -58,11 +58,11 @@ export interface IOrderMessage {
   sender?: string;
   offerLink?: string;
   amount?: string;
-  buyerUsername?: string;
-  sellerUsername?: string;
+  studentUsername?: string;
+  instructorUsername?: string;
   title?: string;
   description?: string;
-  deliveryDays?: string;
+  durationDays?: string;
   orderId?: string;
   invoiceId?: string;
   orderDue?: string;
@@ -78,27 +78,27 @@ export interface IOrderMessage {
   serviceFee?: string;
 }
 
-export interface IOrderDocument {
-  offer: IOffer;
-  gigId: string;
-  sellerId: string;
-  sellerUsername: string;
-  sellerImage: string;
-  sellerEmail: string;
-  gigCoverImage: string;
-  gigMainTitle: string;
-  gigBasicTitle: string;
-  gigBasicDescription: string;
-  buyerId: string;
-  buyerUsername: string;
-  buyerEmail: string;
-  buyerImage: string;
+export interface IEnrolmentDocument {
+  offer: IEnrolment;
+  courseId: string;
+  instructorId: string;
+  instructorUsername: string;
+  instructorImage: string;
+  instructorEmail: string;
+  courseCoverImage: string;
+  courseMainTitle: string;
+  courseBasicTitle: string;
+  courseBasicDescription: string;
+  studentId: string;
+  studentUsername: string;
+  studentEmail: string;
+  studentImage: string;
   status: string;
   orderId: string;
   invoiceId: string;
   quantity: number;
   price: number;
-  requestExtension?: IExtendedDelivery;
+  requestExtension?: IExtendedEnrolment;
   serviceFee?: number;
   requirements?: string;
   approved?: boolean;
@@ -107,13 +107,13 @@ export interface IOrderDocument {
   approvedAt?: string;
   deliveredWork?: IDeliveredWork[];
   dateOrdered?: string;
-  events: IOrderEvents;
-  buyerReview?: IOrderReview;
-  sellerReview?: IOrderReview;
+  events: IEnrolmentEvents;
+  studentReview?: ICourseReview;
+  instructorReview?: ICourseReview;
   paymentIntent?: string;
 }
 
-export interface IOrderNotifcation {
+export interface IEnrolmentNotifcation {
   _id?: string;
   userTo: string;
   senderUsername: string;

@@ -5,11 +5,11 @@ import { NotAuthorizedError } from './error-handler';
 const tokens: string[] = [
   'auth',
   'instructor',
-  'gig',
+  'course',
   'search',
   'student',
   'message',
-  'order',
+  'enrolment',
   'review',
 ];
 

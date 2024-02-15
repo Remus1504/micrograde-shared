@@ -67,7 +67,7 @@ export interface IEnrolmentMessage {
   invoiceId?: string;
   orderDue?: string;
   requirements?: string;
-  orderUrl?: string;
+  enrolmentUrl?: string;
   originalDate?: string;
   newDate?: string;
   reason?: string;

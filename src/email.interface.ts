@@ -8,7 +8,7 @@ export interface IEmailLocals {
   instructorUsername?: string;
   title?: string;
   description?: string;
-  deliveryDays?: string;
+  durationDays?: string;
   orderId?: string;
   orderDue?: string;
   requirements?: string;

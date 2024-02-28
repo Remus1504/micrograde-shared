@@ -1,5 +1,5 @@
 {
-  "version": "0.0.10",
+  "version": "0.0.1",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "description": "Helpers library for micrograde app",
@@ -19,7 +19,7 @@
   "author": "Remus Watters",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Remus1504/MicroGrade.git"
+    "url": "git+https://github.com/remus1504/micrograde.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

@@ -9,7 +9,7 @@ export interface IConversationDocument extends Document {
   senderUsername: string;
   receiverUsername: string;
 }
-
+//comment
 export interface IMessageDocument {
   _id?: string | ObjectId;
   conversationId?: string;

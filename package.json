@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.1",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "description": "Helpers library for micrograde app",
@@ -15,7 +15,7 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@Remus1504/micrograde",
+  "name": "@remus1504/micrograde",
   "author": "Remus Watters",
   "repository": {
     "type": "git",

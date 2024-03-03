@@ -1,16 +1,15 @@
 export interface IEnrolment {
   [key: string]: string | number | boolean | undefined;
-  gigTitle: string;
+  courseTitle: string;
   price: number;
   description: string;
   deliveryInDays: number;
-  oldDeliveryDate: string;
-  newDeliveryDate: string;
+  oldStartDate: string;
+  newStartDate: string;
   accepted: boolean;
   cancelled: boolean;
-  reason?: string; // this is the reason for extending the delivery date
+  reason?: string;
 }
-
 export interface IExtendedEnrolment {
   originalDate: string;
   newDate: string;
@@ -18,7 +17,6 @@ export interface IExtendedEnrolment {
   reason: string;
   deliveryDateUpdate?: string;
 }
-
 export interface IDeliveredWork {
   message: string;
   file: string;
@@ -26,7 +24,6 @@ export interface IDeliveredWork {
   fileSize: number;
   fileName: string;
 }
-
 export interface IEnrolmentEvents {
   placeOrder: string;
   requirements: string;
@@ -36,17 +33,15 @@ export interface IEnrolmentEvents {
   studentReview?: string;
   instructorReview?: string;
 }
-
 export interface ICourseReview {
   rating: number;
   review: string;
   date?: string;
 }
-
 export interface IEnrolmentMessage {
-  sellerId?: string;
-  buyerId?: string;
-  ongoingTasks?: number;
+  instructorId?: string;
+  studentId?: string;
+  onGoingTasks?: number;
   completedTasks?: number;
   totalPoints?: number;
   enrolledCourses?: string;
@@ -77,7 +72,6 @@ export interface IEnrolmentMessage {
   message?: string;
   serviceFee?: string;
 }
-
 export interface IEnrolmentDocument {
   offer: IEnrolment;
   courseId: string;
@@ -112,7 +106,6 @@ export interface IEnrolmentDocument {
   instructorReview?: ICourseReview;
   paymentIntent?: string;
 }
-
 export interface IEnrolmentNotifcation {
   _id?: string;
   userTo: string;

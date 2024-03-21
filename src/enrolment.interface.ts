@@ -3,7 +3,7 @@ export interface IEnrolment {
   courseTitle: string;
   price: number;
   description: string;
-  deliveryInDays: number;
+  durationInDays: number;
   oldStartDate: string;
   newStartDate: string;
   accepted: boolean;
@@ -15,7 +15,7 @@ export interface IExtendedEnrolment {
   newDate: string;
   days: number;
   reason: string;
-  deliveryDateUpdate?: string;
+  startDateUpdate?: string;
 }
 export interface IDeliveredWork {
   message: string;
@@ -28,7 +28,7 @@ export interface IEnrolmentEvents {
   placeOrder: string;
   requirements: string;
   orderStarted: string;
-  deliveryDateUpdate?: string;
+  startDateUpdate?: string;
   enrolmentSucessful?: string;
   studentReview?: string;
   instructorReview?: string;
@@ -43,7 +43,7 @@ export interface IEnrolmentMessage {
   studentId?: string;
   onGoingTasks?: number;
   completedTasks?: number;
-  totalPoints?: number;
+  totalEarnings?: number;
   enrolledCourses?: string;
   recentDelivery?: string;
   type?: string;
@@ -88,7 +88,7 @@ export interface IEnrolmentDocument {
   studentEmail: string;
   studentImage: string;
   status: string;
-  orderId: string;
+  enrolmentId: string;
   invoiceId: string;
   quantity: number;
   price: number;
@@ -100,7 +100,7 @@ export interface IEnrolmentDocument {
   delivered?: boolean;
   approvedAt?: string;
   deliveredWork?: IDeliveredWork[];
-  dateOrdered?: string;
+  dateEnrolled?: string;
   events: IEnrolmentEvents;
   studentReview?: ICourseReview;
   instructorReview?: ICourseReview;
